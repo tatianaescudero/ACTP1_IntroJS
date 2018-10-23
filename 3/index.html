@@ -8,59 +8,75 @@
   Seleccionar el h1 dentro de la sección y duplicar su font-size
   Seleccionar el último row dentro de la tabla (sin utilizar el id, puesto que el número de elementos podría cambiar) y agregar color de fondo rojo
 -->
-
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
-  </head>
-  <body>
+</head>
+
+<body>
     <h1> Hey !! </h1>
     <section class="section-1">
-      <h1> Hey </h1>
-      <span class="counter"> 101 </span>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        <h1> Hey </h1>
+        <span class="counter"> 101 </span>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
     </section>
-
     <table>
-      <tbody>
-        <tr class="row" id="row-1">
-          <td> 1 </td>
-          <td> 1 </td>
-          <td> 1 </td>
-        </tr>
-
-        <tr class="row" id="row-2">
-          <td> 2 </td>
-          <td> 2 </td>
-          <td> 2 </td>
-        </tr>
-
-        <tr class="row" id="row-3">
-          <td> 3 </td>
-          <td> 3 </td>
-          <td> 3 </td>
-        </tr>
-
-        <tr class="row" id="row-4">
-          <td> 4 </td>
-          <td> 4 </td>
-          <td> 4 </td>
-        </tr>
-
-      </tbody>
+        <tbody>
+            <tr class="row" id="row-1">
+                <td> 1 </td>
+                <td> 1 </td>
+                <td> 1 </td>
+            </tr>
+            <tr class="row" id="row-2">
+                <td> 2 </td>
+                <td> 2 </td>
+                <td> 2 </td>
+            </tr>
+            <tr class="row" id="row-3">
+                <td> 3 </td>
+                <td> 3 </td>
+                <td> 3 </td>
+            </tr>
+            <tr class="row" id="row-4">
+                <td> 4 </td>
+                <td> 4 </td>
+                <td> 4 </td>
+            </tr>
+        </tbody>
     </table>
-
     <form class="" action="index.html" method="post">
-      <fieldset>
-        <label for="email"> Email: </label>
-        <input type="text" name="email" value="x@xyz.com">
-
-        <label for="name"> Name: </label>
-        <input type="text" name="name" value="x@xyz.com">
-
-      </fieldset>
+        <fieldset>
+            <label for="email"> Email: </label>
+            <input type="text" name="email" value="x@xyz.com">
+            <label for="name"> Name: </label>
+            <input type="text" name="name" value="x@xyz.com">
+        </fieldset>
     </form>
-  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $("h1").css("color", "red")
+        $(".section-1").css("background-color", "yellow")
+    });
+    var counter = $(".counter").text();
+    counter = parseInt(counter); //se convierte en numero
+    counter = counter + 10; // suma
+    $(".counter").text(counter); // 
+    console.log(counter);
+
+    $("#row-3").on("click", function() {
+        $(this).css("background-color", "gray");
+        $(this).hide(1000);
+    });
+    $("section h1").css("font-size", "2em"); // aumentar tamaño tipografía modo CSS
+    //$("section h1").children("h1").css("font-size", "2em"; // aumentar tamaño tipografía modo jQuery
+
+    $("table tr:last-child").css("background-color", "red"); // CSS
+    //$("table tr").last().css("background-color", "red") // jQuery
+    </script>
+</body>
+
 </html>

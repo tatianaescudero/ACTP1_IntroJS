@@ -1,19 +1,22 @@
 <!--
-
   Ejercicio desde cero:
   Crear un párrafo con un lorem ipsum
   Cada vez que se haga clic sobre el párrafo se debe mostrar una alerta
-
 -->
-
-
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <title></title>
-  </head>
-  <body>
-
-  </body>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur suscipit officiis facere quia laudantium aut perferendis quod nihil eaque, delectus sed magni ipsam at natus, veritatis excepturi labore quaerat odio.
+    </p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript">
+    $("p").click(function() {
+        alert("Alerta!");
+    });
+    </script>
+</body>
 </html>
